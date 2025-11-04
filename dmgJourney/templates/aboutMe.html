@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #005f99;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            border: 5px solid #8d7d85; /* dark pink border around profile image */
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .profile-card p {
+            font-size: 1.1em;
+            line-height: 1.8em;
+            color: #555;
+            margin: 10px 0;
+        }
+        .profile-card p strong {
+            color: #1e8a59;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            background-color: #005f99;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #004a7c;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            margin: 50px 0 20px;
+            color: #555;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(to bottom right, #fbe0ff8a, #ffffff) !important;">
+
+    <div class="container">
+        <h1>About Me</h1>
+
+        <!-- Outer dark pink container -->
+        <div style="background-color: hsl(330, 17%, 98%); padding: 20px; border-radius: 20px; display: inline-block;">
+            
+            <!-- Inner baby pink card -->
+            <div class="profile-card" style="background-color: #ffc0cb; padding: 40px 20px; border-radius: 20px;">
+                <img src="{% static 'dmgJourney/profile.jpg' %}" alt="My Profile">
+                <p>
+                    Hello! I’m <strong>Dhan Maya Gurung</strong>, a student at Samtse College of Education pursuing a B.Ed in IT.
+                </p>
+                <p>
+                    I enjoy exploring how <strong>technology enhances education</strong> and learning, and I am passionate about developing web applications and interactive digital solutions.
+                </p>
+                <a href="{% url 'index' %}" class="btn">← Back to Learning Journey</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Dhan Maya Gurung | Personal Learning Journey
+    </footer>
+
+</body>
+</html>
